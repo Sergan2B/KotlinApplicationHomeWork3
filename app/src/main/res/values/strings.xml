@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KotlinApplicationHomeWork3</string>
+    <string name="choice_photo">Выбор фотографий</string>
+    <string name="selected_photo">Выбранные фотографии</string>
+    <string name="button">Button</string>
+    <string name="todo">TODO</string>
+</resources>
