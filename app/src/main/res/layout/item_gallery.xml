@@ -11,16 +11,16 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_recycler"
-            android:layout_width="102dp"
-            android:layout_height="102dp"
+            android:layout_width="@dimen/image_102dp"
+            android:layout_height="@dimen/image_102dp"
             android:layout_margin="@dimen/normal_16dp"
             android:scaleType="centerCrop"
             tools:background="@mipmap/ic_launcher" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_recycler_border"
-            android:layout_width="102dp"
-            android:layout_height="102dp"
+            android:layout_width="@dimen/image_102dp"
+            android:layout_height="@dimen/image_102dp"
             android:layout_marginStart="@dimen/normal_16dp"
             android:layout_marginTop="@dimen/normal_16dp"
             android:layout_marginEnd="@dimen/normal_16dp"
@@ -30,8 +30,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_recycler_border_2"
-            android:layout_width="102dp"
-            android:layout_height="102dp"
+            android:layout_width="@dimen/image_102dp"
+            android:layout_height="@dimen/image_102dp"
             android:layout_marginStart="@dimen/normal_16dp"
             android:layout_marginTop="@dimen/normal_16dp"
             android:layout_marginEnd="@dimen/normal_16dp"
@@ -41,13 +41,13 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_recycler_border_3"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/icon_ok"
+            android:layout_height="@dimen/icon_ok"
             android:layout_alignStart="@+id/image_recycler"
             android:layout_alignTop="@+id/image_recycler"
             android:layout_alignEnd="@+id/image_recycler"
             android:layout_alignBottom="@+id/image_recycler"
-            android:layout_margin="40dp"
+            android:layout_margin="@dimen/inner_margin"
             android:scaleType="centerCrop"
             android:src="@drawable/success" />
     </RelativeLayout>

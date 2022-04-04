@@ -1,4 +1,4 @@
-package kg.geektech.kotlinapplicationhomework3.Adapter
+package kg.geektech.kotlinapplicationhomework3.adapter
 
 import android.annotation.SuppressLint
 import android.net.Uri

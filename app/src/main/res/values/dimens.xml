@@ -2,4 +2,8 @@
 <resources>
     <dimen name="normal_16dp">16dp</dimen>
     <dimen name="title_size_26sp">26sp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="image_102dp">102dp</dimen>
+    <dimen name="icon_ok">24dp</dimen>
+    <dimen name="inner_margin">40dp</dimen>
 </resources>

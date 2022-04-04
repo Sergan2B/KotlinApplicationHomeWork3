@@ -1,6 +1,5 @@
 package kg.geektech.kotlinapplicationhomework3
 
-import android.R
 import android.content.ClipData
 import android.content.Intent
 import android.graphics.Color
@@ -10,7 +9,7 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import kg.geektech.kotlinapplicationhomework3.Adapter.ImageAdapter
+import kg.geektech.kotlinapplicationhomework3.adapter.ImageAdapter
 import kg.geektech.kotlinapplicationhomework3.base.BaseActivity
 import kg.geektech.kotlinapplicationhomework3.databinding.ActivityMainBinding
 
@@ -63,15 +62,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ImageAdapter.Listener 
     }
 
     private fun showSnackBar(message: String) {
-        val rootView = findViewById<View>(R.id.content)
+        val rootView = findViewById<View>(androidx.appcompat.R.id.content)
         if (rootView != null) {
             Snackbar.make(rootView, message, Snackbar.LENGTH_INDEFINITE)
-                .setAction("Готово") {
+                .setAction(getString(R.string.ready)) {
                     openActivity(imageList)
                 }
-                .setActionTextColor(Color.parseColor("#BB4444"))
-                // .setBackgroundTint(ContextCompat.getColor(this, R.color.holo_orange_light))
-                //.setBackgroundTint(R.drawable.alert_light_frame)
+                .setActionTextColor(Color.parseColor(getString(R.string.color)))
                 .show()
         }
     }
@@ -79,14 +76,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ImageAdapter.Listener 
     override fun onClick(mainImage: Uri) {
         imageList.addAll(listOf(mainImage))
         if (imageList.size >= 0) {
-            showSnackBar("Выбрано " + imageList.size + " фотографий")
+            showSnackBar(getString(R.string.selected) + imageList.size + getString(R.string.photo))
         }
     }
 
     override fun deleteClick(mainImage: Uri) {
         imageList.remove(mainImage)
         if (imageList.size >= 0) {
-            showSnackBar("Выбрано " + imageList.size + " фотографий")
+            showSnackBar(getString(R.string.selected) + imageList.size + getString(R.string.photo))
         }
     }
 

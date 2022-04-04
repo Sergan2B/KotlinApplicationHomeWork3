@@ -11,8 +11,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_selected_recycler"
-            android:layout_width="102dp"
-            android:layout_height="102dp"
+            android:layout_width="@dimen/image_102dp"
+            android:layout_height="@dimen/image_102dp"
             android:layout_margin="@dimen/normal_16dp"
             android:scaleType="centerCrop"
             tools:background="@mipmap/ic_launcher" />

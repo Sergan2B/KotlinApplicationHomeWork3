@@ -3,10 +3,9 @@ package kg.geektech.kotlinapplicationhomework3
 import android.net.Uri
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.GridLayoutManager
-import kg.geektech.kotlinapplicationhomework3.Adapter.SelectedImageAdapter
+import kg.geektech.kotlinapplicationhomework3.adapter.SelectedImageAdapter
 import kg.geektech.kotlinapplicationhomework3.base.BaseActivity
 import kg.geektech.kotlinapplicationhomework3.databinding.ActivitySelectedImagesBinding
-import kg.geektech.kotlinapplicationhomework3.extentions.showToast
 
 class ActivitySelectedImages : BaseActivity<ActivitySelectedImagesBinding>(),
     SelectedImageAdapter.Listener {
@@ -18,11 +17,7 @@ class ActivitySelectedImages : BaseActivity<ActivitySelectedImagesBinding>(),
     }
 
     override fun initListener() {
-        val getString: String? = intent.getStringExtra("kii")
-        if (getString != null) {
-            showToast(getString)
-        }
-        val uri: ArrayList<Uri>? = intent.getParcelableArrayListExtra("img")
+        val uri: ArrayList<Uri>? = intent.getParcelableArrayListExtra(MainActivity.KEY_IMG)
         if (uri != null) {
             adapter.addImage(uri)
         }

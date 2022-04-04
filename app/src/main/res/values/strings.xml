@@ -4,4 +4,8 @@
     <string name="selected_photo">Выбранные фотографии</string>
     <string name="button">Button</string>
     <string name="todo">TODO</string>
+    <string name="ready">Готово</string>
+    <string name="selected">\"Выбрано \"</string>
+    <string name="photo">\" фотографий\"</string>
+    <string name="color">#BB4444</string>
 </resources>
